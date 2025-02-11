@@ -139,7 +139,7 @@ export type Startup = {
     _weak?: boolean;
     [internalGroqTypeReferenceTo]?: "author";
   };
-  view?: number;
+  views?: number;
   description?: string;
   category?: string;
   image?: string;

@@ -8,8 +8,16 @@ import { Button } from "./ui/button";
 export type StartupTypeCard = Omit<Startup, "author"> & { author?: Author };
 
 const StartupCard = ({ post }: { post: StartupTypeCard }) => {
-  const { _id, _createdAt, view, image, description, category, author, title } =
-    post;
+  const {
+    _id,
+    _createdAt,
+    views,
+    image,
+    description,
+    category,
+    author,
+    title,
+  } = post;
 
   return (
     <li className="startup-card group">
@@ -17,7 +25,7 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
         <p className="startup_card_date">{formatDate(_createdAt)}</p>
         <div className="flex gap-1.5">
           <EyeIcon className="size-6 text-primary" />
-          <span className="text-16-medium">{view}</span>
+          <span className="text-16-medium">{views}</span>
         </div>
       </div>
 
